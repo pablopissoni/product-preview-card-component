@@ -1,0 +1,33 @@
+:root {
+    /* Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+    /* border: 1px solid red; */
+}
+
+.image_container img{
+    width: 345px;
+    height: 240px;
+    border: 1px solid blue;
+}
+
+.text_container{
+    width: 345px;
+    height: 370px;
+    border: 1px solid blue;
+    background-color: antiquewhite;
+}
