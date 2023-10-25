@@ -7,6 +7,9 @@
     --Very-dark-blue: hsl(212, 21%, 14%);
     --Dark-grayish-blue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
+
+    /* font-family: 'Fraunces', serif; */
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 body{
@@ -34,15 +37,11 @@ body{
     border-radius: 12px 12px 0px 0px;
 }
 
-/* .image_container img{
-    width: 345px;
-    height: 240px;
-    border-radius: 12px 12px 0px 0px;
-    border: 1px solid blue;
-} */
+.image_desktop{
+    display: none;
+}
 
 .text_container{
-    /* border: 1px solid red; */
     display: inline-block; /* quito el espacio entre los contenedores */
     width: 345px;
     height: 370px;
@@ -53,34 +52,101 @@ body{
 }
 
 .text_container h3{
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    letter-spacing: 3px;
     margin: 0;
 }
 .text_container h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 33px;
     margin: 15px 0px ;
 }
-.text_container p{
-    /* margin: 15px 0px ; */
+.description_text {
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-.price {
+.discounted-price {
     color: darkgray;
     text-decoration: line-through;
 }
-.price span{
+
+.price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    vertical-align: middle;
     color: var(--Dark-cyan);
+    margin-right: 20px;
+    font-size: 35px;
     text-decoration: none;
-    font-size: 30px;
+}
+.description_text,.discounted-price, h3, button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
-button{
+.button_add{
     height: 50px;
     width: 100%;
     border-radius: 10px;
     border: none;
-    color: var(--Cream);
+    color: var(--White);
+    font-size: 14px;
     background-color: var(--Dark-cyan);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button_add:hover{
+    background-color: #1a4031;
+}
+
+.button_add img{
+    margin-right: 6px;
 }
 
 .attribution{
     margin-top: 20px;
+}
+
+@media (min-width:1440px) {
+
+    .contentWrapper{
+        display: flex;
+        width: 600px;
+        height: 450px;
+    }
+    .image_mobile{
+        display: none;
+    }
+
+    .image_desktop{
+        display: inline;
+        border-radius: 12px 0px 0px 12px;
+        width: 300px;
+        height: 450px;
+    }
+
+    .text_container{
+        height: auto;
+        border-radius: 0px 12px 12px 0px;
+    }
+    .text_container h3{
+        margin-top:10px;
+    }
+    .text_container h1{
+        padding-right:10px;
+    }
+    .description_text {
+        padding:10px 10px 10px 0px;
+    }
+    .button_add{
+        margin-top:20px ;
+    }
 }
